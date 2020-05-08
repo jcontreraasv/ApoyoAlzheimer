@@ -21,7 +21,6 @@ class BienvenidoActivity : AppCompatActivity() {
             tv_email.setText(correo)
         }
 
-/*
         val background= object : Thread(){
             override fun run() {
                 try{
@@ -36,7 +35,5 @@ class BienvenidoActivity : AppCompatActivity() {
             }
         }
         background.start()
-
- */
     }
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuJuegosActivity"
+    android:background="@color/b">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:text="@string/ej"
+                android:textColor="@color/colorBlanco"
+                android:textSize="50dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/secuenciaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:text="@string/sec"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/sec2"
+                android:drawableRight="@drawable/sec1">
+            </Button>
+
+            <Button
+                android:id="@+id/operacionesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:text="@string/op"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/op1"
+                android:drawableRight="@drawable/op2">
+
+            </Button>
+
+            <Button
+                android:id="@+id/coloresBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:text="@string/col"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/col2"
+                android:drawableRight="@drawable/col1">
+
+            </Button>
+
+            <Button
+                android:id="@+id/examenBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:text="@string/ex"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/ex1"
+                android:drawableRight="@drawable/ex2">
+
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

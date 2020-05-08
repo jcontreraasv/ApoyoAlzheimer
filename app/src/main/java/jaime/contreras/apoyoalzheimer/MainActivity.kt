@@ -2,6 +2,7 @@ package jaime.contreras.apoyoalzheimer
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -38,6 +39,12 @@ class MainActivity : AppCompatActivity() {
         google_boton.setOnClickListener{
             val signInIntent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
+
+            var intento1: Intent = Intent(this,RegistroActivity::class.java)
+
+            registro.setOnClickListener{
+                startActivity(intento1)
+            }
         }
     }
 

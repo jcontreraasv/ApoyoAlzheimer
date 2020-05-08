@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuActivity"
+    android:background="@color/b">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/logo2">
+                    </ImageView>
+
+                    <ImageButton
+                        android:id="@+id/btn_ajustes"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="150dp"
+                        android:src="@drawable/ajustes">
+                    </ImageButton>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ejercicios_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/e"
+                    android:textStyle="bold"
+                    android:text="@string/ej"
+                    android:background="@drawable/boton_orilla_redonda"
+                    android:drawableLeft="@drawable/eje2"
+                    android:drawableRight="@drawable/eje1">
+                </Button>
+
+                <Button
+                    android:id="@+id/recuerdos_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/e"
+                    android:text="@string/rec"
+                    android:background="@drawable/boton_orilla_redonda"
+                    android:drawableLeft="@drawable/gal1"
+                    android:drawableRight="@drawable/gal2">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/consejos_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/e"
+                    android:textStyle="bold"
+                    android:text="@string/cons"
+                    android:background="@drawable/boton_orilla_redonda"
+                    android:drawableLeft="@drawable/cons1"
+                    android:drawableRight="@drawable/cons1">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/ubicacion_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/e"
+                    android:textStyle="bold"
+                    android:text="@string/ubi"
+                    android:background="@drawable/boton_orilla_redonda"
+                    android:drawableLeft="@drawable/ubi1"
+                    android:drawableRight="@drawable/ubi1">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/itinerario_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/e"
+                    android:textStyle="bold"
+                    android:text="@string/iti"
+                    android:background="@drawable/boton_orilla_redonda"
+                    android:drawableLeft="@drawable/itin2"
+                    android:drawableRight="@drawable/itin1">
+
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

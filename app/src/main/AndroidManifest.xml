@@ -27,11 +27,11 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyC1OZJigXV4cXyP_VqTuR4k0F-ztuc5Nv0" />
 
         <activity
-            android:name=".UbicacionActivity"
-            android:label="@string/title_activity_ubicacion"></activity>
+            android:name=".MiUbicacionActivity"
+            android:label="@string/title_activity_mi_ubicacion" />
         <activity android:name=".ActivityAjustes" />
         <activity android:name=".MenuJuegosActivity" />
         <activity android:name=".RegistroActivity" />

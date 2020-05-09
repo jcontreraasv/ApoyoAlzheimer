@@ -14,6 +14,7 @@ class MainMenuActivity : AppCompatActivity() {
 
         var intento0: Intent = Intent(this,ActivityAjustes::class.java)
         var intento1: Intent = Intent(this,MenuJuegosActivity::class.java)
+        var intento3: Intent = Intent(this,MiUbicacionActivity::class.java)
 
         ejercicios_btn.setOnClickListener{
             startActivity(intento1)
@@ -21,6 +22,12 @@ class MainMenuActivity : AppCompatActivity() {
 
         btn_ajustes.setOnClickListener{
             startActivity(intento0)
+        }
+        
+        
+        
+        ubicacion_btn.setOnClickListener{
+            startActivity(intento3)
         }
     }
 }

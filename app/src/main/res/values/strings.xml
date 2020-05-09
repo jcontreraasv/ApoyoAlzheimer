@@ -47,11 +47,9 @@
         sea 2 veces por semana o 2 veces por mes, si su participante respondió correcto palomita si es
         incorrecto cruz.</string>
 
-    //STRINGS FB
-    <string name="facebook_app_id">637245276855047</string>
-    <string name="fb_login_protocol_scheme">fb637245276855047</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_ubicacion">Map</string>
+    <string name="title_activity_mi_ubicacion">Map</string>
 
 
 </resources>

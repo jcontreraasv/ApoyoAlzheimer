@@ -13,6 +13,7 @@ class BienvenidoActivity : AppCompatActivity() {
 
         val bundle= intent.extras
 
+        /*
         if(bundle!=null){
             val nombre=bundle.getString("name")
             val correo=bundle.getString("email")
@@ -20,6 +21,7 @@ class BienvenidoActivity : AppCompatActivity() {
             tv_nombre.setText(nombre)
             tv_email.setText(correo)
         }
+         */
 
         val background= object : Thread(){
             override fun run() {

@@ -26,7 +26,7 @@
 
             <FrameLayout
                 android:layout_width="310dp"
-                android:layout_height="280dp"
+                android:layout_height="230dp"
                 android:layout_marginLeft="50dp"
                 android:background="@color/d">
 
@@ -39,7 +39,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="25dp"
+                            android:layout_marginLeft="35dp"
                             android:layout_marginTop="30dp"
                             android:fontFamily="@font/galyon_bold"
                             android:textStyle="bold"
@@ -54,7 +54,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="50dp"
-                            android:layout_marginBottom="-35dp"
+                            android:layout_marginBottom="-30dp"
                             android:button="@drawable/checkbox_selector"
                             android:checked="true">
 
@@ -66,7 +66,7 @@
 
                         <TextView
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="25dp"
+                            android:layout_marginLeft="35dp"
                             android:layout_marginTop="60dp"
                             android:fontFamily="@font/galyon_bold"
                             android:textStyle="bold"
@@ -82,8 +82,8 @@
                             android:layout_height="match_parent"
                             android:button="@drawable/checkbox_selector"
                             android:layout_marginLeft="50dp"
-                            android:layout_marginBottom="-65dp"
-                            android:checked="false">
+                            android:layout_marginBottom="-60dp"
+                            android:checked="true">
 
                         </CheckBox>
 

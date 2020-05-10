@@ -13,39 +13,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="320dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="280dp"
             android:text="@string/bien"
             android:textStyle="bold"
             android:fontFamily="@font/galyon_bold"
             android:textColor="@color/colorBlanco"
             android:textSize="45dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/tv_nombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-250dp"
-            android:layout_marginTop="400dp"
-            android:text="Nombre Apellido"
-            android:textStyle="bold"
-            android:fontFamily="@font/galyon_bold"
-            android:textColor="@color/colorBlanco"
-            android:textSize="30dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/tv_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-260dp"
-            android:layout_marginTop="450dp"
-            android:text="correo@ejemplo.com"
-            android:textStyle="bold"
-            android:fontFamily="@font/galyon_bold"
-            android:textColor="@color/colorBlanco"
-            android:textSize="30dp">
         </TextView>
 
     </LinearLayout>

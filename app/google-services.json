@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991201987110",
+    "firebase_url": "https://iniciosesionapoy-1588932125163.firebaseio.com",
+    "project_id": "iniciosesionapoy-1588932125163",
+    "storage_bucket": "iniciosesionapoy-1588932125163.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991201987110:android:efa1be2b83977bc67534e7",
+        "android_client_info": {
+          "package_name": "jaime.contreras.apoyoalzheimer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991201987110-gkn6q8l606muun8q8tlrp5upaijtphgd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jaime.contreras.apoyoalzheimer",
+            "certificate_hash": "c155d6a6012cfb02ac3df3c8588476f81480532d"
+          }
+        },
+        {
+          "client_id": "991201987110-i0osshc3ou9i954k5mtaph8embr648v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwsHryeoeEi4qpPGnhh_cuu71EuIhu54Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991201987110-i0osshc3ou9i954k5mtaph8embr648v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,8 +1,13 @@
 package jaime.contreras.apoyoalzheimer
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -11,27 +16,38 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.properties.Delegates
 
 
 class MainActivity : AppCompatActivity() {
 
+    //private val TAG = "LoginActivity"
+    //global variables
+    private var email by Delegates.notNull<String>()
+    private var password by Delegates.notNull<String>()
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var mProgressBar: ProgressDialog
+
     val RC_SIGN_IN=123
     lateinit var mGoogleSignInClient: GoogleSignInClient
+
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Configure sign-in to request the user's ID, email address, and basic
-// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        initialise()
 
         // Configure sign-in to request the user's ID, email address, and basic
-// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-        val gso =
-            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build()
+        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+
+        // Configure sign-in to request the user's ID, email address, and basic
+        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
 
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -40,11 +56,23 @@ class MainActivity : AppCompatActivity() {
             val signInIntent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
 
+            /*
             var intento1: Intent = Intent(this,RegistroActivity::class.java)
 
             registro.setOnClickListener{
                 startActivity(intento1)
             }
+
+             */
+
+            /*
+            var intento2: Intent = Intent(this,OlvidarContraActivity::class.java)
+
+            olvido.setOnClickListener{
+                startActivity(intento2)
+            }
+
+             */
         }
     }
 
@@ -80,10 +108,74 @@ class MainActivity : AppCompatActivity() {
         if (account!=null){
             val intent= Intent(this,BienvenidoActivity::class.java)
 
+            /*
             intent.putExtra("name",account.displayName)
             intent.putExtra("email",account.email)
+             */
 
             startActivity(intent)
         }
     }
+
+    private fun initialise() {
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        mProgressBar = ProgressDialog(this)
+        mAuth = FirebaseAuth.getInstance()
+    }
+
+    private fun loginUser() {
+        //Obtenemos usuario y contraseña
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
+        //Verificamos que los campos no este vacios
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            //Mostramos el progressdialog
+            mProgressBar.setMessage("Registering User...")
+            mProgressBar.show()
+
+            //Iniciamos sesión con el método signIn y enviamos usuario y contraseña
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+                    //Verificamos que la tarea se ejecutó correctamente
+                    task ->
+                    if (task.isSuccessful) {
+                        // Si se inició correctamente la sesión vamos a la vista Home de la aplicación
+                        goHome() // Creamos nuestro método en la parte de abajo
+                    }
+                    else {
+                        // sino le avisamos el usuairo que orcurrio un problema
+                        Toast.makeText(this, "Fallo de inicio de sesión.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+        else {
+            Toast.makeText(this, "Campos vacios.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+    private fun goHome() {
+        //Ocultamos el progress
+        mProgressBar.hide()
+        //Nos vamos a Home
+        val intent = Intent(this, BienvenidoActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+    }
+
+    /*Primero creamos nuestro evento login dentro de este llamamos nuestro método loginUser al dar click en el botón se iniciara sesión */
+    fun iniciosesion(view: View) {
+        loginUser()
+    }
+
+    /*Si se olvido de la contraseña lo enviaremos en la siguiente actividad nos marcara error porque necesitamos crear la actividad*/
+    fun olvidarContra(view: View) {
+        startActivity(Intent(this, OlvidarContraActivity::class.java))
+    }
+
+    /*Si quiere registrarse lo enviaremos en la siguiente actividad nos marcara error porque necesitamos crear la actividad*/
+    fun registrar(view: View) {
+        startActivity(Intent(this, RegistroActivity::class.java))
+    }
 }
+

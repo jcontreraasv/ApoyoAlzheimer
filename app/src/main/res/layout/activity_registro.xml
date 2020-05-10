@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,10 +26,9 @@
             0
 
             <ImageView
-                android:layout_width="400dp"
-                android:layout_height="280dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/logo">
             </ImageView>
@@ -54,6 +52,31 @@
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/a"
                 android:fontFamily="@font/galyon_bold"
+                android:textColor="@color/a"
+                android:textSize="20dp"
+                android:inputType="textPersonName">
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apellido"
+                android:textStyle="bold"
+                android:textColor="@color/a"
+                android:layout_marginLeft="50dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/galyon_bold">
+            </TextView>
+
+            <EditText
+                android:id="@+id/txtLastName"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/a"
+                android:fontFamily="@font/galyon_bold"
+                android:textColor="@color/a"
                 android:textSize="20dp"
                 android:inputType="textPersonName">
             </EditText>
@@ -77,6 +100,7 @@
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/a"
                 android:fontFamily="@font/galyon_bold"
+                android:textColor="@color/a"
                 android:textSize="20dp"
                 android:inputType="textEmailAddress">
             </EditText>
@@ -97,15 +121,16 @@
                 android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="45dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="25dp"
                 android:backgroundTint="@color/a"
                 android:fontFamily="@font/galyon_bold"
+                android:textColor="@color/a"
                 android:textSize="20dp"
                 android:inputType="textPassword">
             </EditText>
 
             <Button
-
+                android:onClick="register"
                 android:layout_width="344dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

@@ -29,6 +29,7 @@ class OlvidarContraActivity : AppCompatActivity() {
             auth.sendPasswordResetEmail(email).addOnCompleteListener(this) {
                     task ->
                     if (task.isSuccessful) {
+                        Toast.makeText(this, "Verifica tu correo.", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,MainActivity::class.java))
                 }
                 else {

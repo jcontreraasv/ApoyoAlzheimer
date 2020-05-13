@@ -1,28 +1,23 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.juegos
 
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AlertDialog
+import jaime.contreras.apoyoalzheimer.R
 
-class JuegoExamenActivity : AppCompatActivity() {
+class JuegoSecuenciaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_juego_examen)
+        setContentView(R.layout.activity_juego_secuencia)
 
-        val dialog=AlertDialog.Builder(this)
-        val dialogView=layoutInflater.inflate(R.layout.activity_juego_examen_dialog,null)
+        val dialog= AlertDialog.Builder(this)
+        val dialogView=layoutInflater.inflate(R.layout.activity_juego_secuencia_dialog,null)
 
         dialog.setView(dialogView)
         dialog.setCancelable(false)
         dialog.setPositiveButton("Ok",{ dialogInterface: DialogInterface, i: Int -> })
         dialog.show()
-
-
-
     }
-
-
 }

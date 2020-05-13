@@ -1,4 +1,4 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.inicio
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import jaime.contreras.apoyoalzheimer.R
 import kotlin.properties.Delegates
 
 class RegistroActivity : AppCompatActivity() {

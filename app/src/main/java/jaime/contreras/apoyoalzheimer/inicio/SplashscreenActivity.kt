@@ -1,8 +1,9 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.inicio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import jaime.contreras.apoyoalzheimer.R
 
 class SplashscreenActivity : AppCompatActivity() {
 
@@ -16,7 +17,8 @@ class SplashscreenActivity : AppCompatActivity() {
                 try{
                     Thread.sleep(5000)
 
-                    val intent = Intent(baseContext,MainActivity::class.java)
+                    val intent = Intent(baseContext,
+                        MainActivity::class.java)
                     startActivity(intent)
                 }
                 catch (e: Exception){

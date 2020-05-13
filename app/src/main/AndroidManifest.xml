@@ -15,10 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme1">
-        <activity android:name=".JuegoColoresActivity"></activity>
-        <activity android:name=".JuegoSecuenciaActivity" />
-        <activity android:name=".JuegoExamenActivity" />
-        <activity android:name=".OlvidarContraActivity" />
+        <activity android:name=".juegos.JuegoOperacionesActivity"></activity>
+        <activity android:name=".juegos.JuegoExamenFinalActivity" />
+        <activity android:name=".juegos.JuegoColoresActivity" />
+        <activity android:name=".juegos.JuegoSecuenciaActivity" />
+        <activity android:name=".juegos.JuegoExamenActivity" />
+        <activity android:name=".inicio.OlvidarContraActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,14 +34,14 @@
             android:value="AIzaSyC1OZJigXV4cXyP_VqTuR4k0F-ztuc5Nv0" />
 
         <activity
-            android:name=".MiUbicacionActivity"
+            android:name=".funciones.MiUbicacionActivity"
             android:label="@string/title_activity_mi_ubicacion" />
-        <activity android:name=".ActivityAjustes" />
-        <activity android:name=".MenuJuegosActivity" />
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".funciones.AjustesActivity" />
+        <activity android:name=".juegos.MenuJuegosActivity" />
+        <activity android:name=".inicio.RegistroActivity" />
+        <activity android:name=".funciones.MainMenuActivity" />
         <activity
-            android:name=".SplashscreenActivity"
+            android:name=".inicio.SplashscreenActivity"
             android:noHistory="true"
             android:theme="@style/SplashTheme1">
             <intent-filter>
@@ -48,8 +50,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".BienvenidoActivity" />
+        <activity android:name=".inicio.MainActivity" />
+        <activity android:name=".inicio.BienvenidoActivity" />
     </application>
 
 </manifest>

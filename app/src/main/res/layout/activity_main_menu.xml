@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenuActivity"
+    tools:context=".funciones.MainMenuActivity"
     android:background="@color/b">
 
     <ScrollView
@@ -30,13 +30,13 @@
                         android:src="@drawable/logo2">
                     </ImageView>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/btn_ajustes"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginLeft="170dp"
-                        android:src="@drawable/ajustes">
-                    </ImageButton>
+                        android:layout_marginLeft="140dp"
+                        android:background="@drawable/ajustes">
+                    </Button>
 
                 </TableRow>
 

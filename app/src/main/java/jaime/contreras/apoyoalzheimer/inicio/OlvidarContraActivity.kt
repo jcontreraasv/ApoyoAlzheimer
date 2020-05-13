@@ -1,4 +1,4 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.inicio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import jaime.contreras.apoyoalzheimer.R
 
 class OlvidarContraActivity : AppCompatActivity() {
 
@@ -30,7 +31,8 @@ class OlvidarContraActivity : AppCompatActivity() {
                     task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Verifica tu correo.", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this,MainActivity::class.java))
+                        startActivity(Intent(this,
+                            MainActivity::class.java))
                 }
                 else {
                     Toast.makeText(this, "No se encontró el usuario con este correo", Toast.LENGTH_SHORT).show()

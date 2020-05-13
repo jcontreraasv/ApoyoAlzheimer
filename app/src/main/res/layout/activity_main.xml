@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/b"
-    tools:context=".MainActivity">
+    tools:context=".inicio.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -148,7 +148,6 @@
                 </TableRow>
 
                 <TableRow>
-
                     <Button
                         android:id="@+id/fb_boton"
                         android:layout_width="match_parent"
@@ -175,7 +174,6 @@
                         android:textColor="@color/b"
                         android:textSize="20dp"
                         android:textStyle="bold">
-
                     </Button>
                 </TableRow>
             </TableLayout>

@@ -1,4 +1,4 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.funciones
 
 import android.content.pm.PackageManager
 import android.location.Location
@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import jaime.contreras.apoyoalzheimer.R
 
 class MiUbicacionActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
@@ -71,7 +72,8 @@ class MiUbicacionActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.O
         if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_FINE_LOCATION)
             != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
-                LOCATION_PERMISSION_REQUEST_CODE)
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
             return
         }
 

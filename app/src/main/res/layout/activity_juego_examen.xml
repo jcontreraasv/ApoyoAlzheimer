@@ -3,47 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JuegoExamenActivity"
+    tools:context=".juegos.JuegoExamenActivity"
     android:background="@color/d">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
         <TextView
+            android:id="@+id/pregunta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:text="Pregunta"
             android:textStyle="bold"
             android:fontFamily="@font/galyon_bold"
             android:textColor="@color/colorBlanco"
-            android:textSize="45dp">
+            android:textSize="40dp">
         </TextView>
 
                 <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="600dp">
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="400dp">
 
                 <TableRow>
 
-                    <ImageButton
-                        android:layout_width="10dp"
-                        android:layout_height="10dp">
-                    </ImageButton>
+                    <Button
+                        android:onClick="correcto"
+                        android:id="@+id/boton_quiz_incorrecto"
+                        android:background="@drawable/ex2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+                    </Button>
 
-                    <ImageButton
-                        android:layout_width="10dp"
-                        android:layout_height="10dp">
-                    </ImageButton>
+                    <Button
+                        android:onClick="incorrecto"
+                        android:id="@+id/boton_quiz_correcto"
+                        android:background="@drawable/ex1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="50dp">
+                    </Button>
                 </TableRow>
             </TableLayout>
-        </LinearLayout>
-    </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

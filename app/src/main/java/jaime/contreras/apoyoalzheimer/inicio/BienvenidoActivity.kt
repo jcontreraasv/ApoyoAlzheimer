@@ -1,9 +1,10 @@
-package jaime.contreras.apoyoalzheimer
+package jaime.contreras.apoyoalzheimer.inicio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_bienvenido.*
+import jaime.contreras.apoyoalzheimer.R
+import jaime.contreras.apoyoalzheimer.funciones.MainMenuActivity
 
 class BienvenidoActivity : AppCompatActivity() {
 
@@ -28,7 +29,8 @@ class BienvenidoActivity : AppCompatActivity() {
                 try{
                     Thread.sleep(5000)
 
-                    val intent = Intent(baseContext,MainMenuActivity::class.java)
+                    val intent = Intent(baseContext,
+                        MainMenuActivity::class.java)
                     startActivity(intent)
                 }
                 catch (e: Exception){

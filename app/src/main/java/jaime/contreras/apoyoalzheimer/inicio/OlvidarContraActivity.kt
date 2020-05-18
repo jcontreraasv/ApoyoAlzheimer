@@ -31,8 +31,7 @@ class OlvidarContraActivity : AppCompatActivity() {
                     task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Verifica tu correo.", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this,
-                            MainActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                 }
                 else {
                     Toast.makeText(this, "No se encontró el usuario con este correo", Toast.LENGTH_SHORT).show()

@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import jaime.contreras.apoyoalzheimer.R
 import kotlinx.android.synthetic.main.activity_juego_examen.*
-import kotlinx.android.synthetic.main.activity_juego_operaciones.*
 
 class JuegoExamenActivity : AppCompatActivity() {
 

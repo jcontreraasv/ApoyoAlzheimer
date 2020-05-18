@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".funciones.AjustesActivity"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingHorizontal="50dp"
     android:background="@color/b">
 
     <ScrollView
@@ -13,48 +15,49 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="350dp"
-                android:layout_height="250dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/logo">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/apoyo2">
             </ImageView>
 
             <FrameLayout
-                android:layout_width="310dp"
-                android:layout_height="230dp"
-                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/d">
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp">
 
-                    <TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="20dp"
                             android:fontFamily="@font/galyon_bold"
-                            android:textStyle="bold"
                             android:text="@string/son"
                             android:textColor="@color/b"
-                            android:textSize="35dp">
-
+                            android:textSize="35dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal">
                         </TextView>
 
                         <CheckBox
                             android:id="@+id/sonido"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginBottom="-30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="40dp"
                             android:button="@drawable/checkbox_selector"
                             android:checked="true">
 
@@ -62,27 +65,29 @@
 
                     </TableRow>
 
-                    <TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="20dp"
                             android:fontFamily="@font/galyon_bold"
-                            android:textStyle="bold"
                             android:text="@string/mus"
                             android:textColor="@color/b"
-                            android:textSize="35dp">
-
+                            android:textSize="35dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal">
                         </TextView>
 
                         <CheckBox
                             android:id="@+id/musica"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="40dp"
                             android:button="@drawable/checkbox_selector"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginBottom="-60dp"
                             android:checked="true">
 
                         </CheckBox>

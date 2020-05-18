@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".funciones.MainMenuActivity"
-    android:background="@color/b">
+    android:background="@color/b"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingHorizontal="25dp"
+    tools:context=".funciones.MainMenuActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,22 +26,19 @@
                 <TableRow>
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
                         android:src="@drawable/logo2">
                     </ImageView>
 
                     <Button
                         android:id="@+id/btn_ajustes"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="140dp"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginLeft="120dp"
                         android:background="@drawable/ajustes">
                     </Button>
-
                 </TableRow>
-
             </TableLayout>
 
             <LinearLayout
@@ -51,9 +50,7 @@
                     android:id="@+id/ejercicios_btn"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/galyon_bold"
                     android:textSize="30dp"
                     android:textColor="@color/e"
@@ -68,8 +65,6 @@
                     android:id="@+id/recuerdos_btn"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/galyon_bold"
                     android:textSize="30dp"
@@ -86,8 +81,6 @@
                     android:id="@+id/consejos_btn"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/galyon_bold"
                     android:textSize="30dp"
@@ -104,8 +97,6 @@
                     android:id="@+id/ubicacion_btn"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/galyon_bold"
                     android:textSize="30dp"
@@ -122,8 +113,6 @@
                     android:id="@+id/itinerario_btn"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/galyon_bold"
                     android:textSize="30dp"
@@ -142,4 +131,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

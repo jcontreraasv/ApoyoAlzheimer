@@ -1,59 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".juegos.JuegoExamenActivity"
-    android:background="@color/d">
+    android:background="@color/d"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp"
+    android:paddingHorizontal="40dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Pregunta"
+                android:textStyle="bold"
+                android:fontFamily="@font/galyon_bold"
+                android:textColor="@color/colorBlanco"
+                android:textSize="40dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/pregunta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="80dp"
-            android:text="Pregunta"
-            android:textStyle="bold"
-            android:fontFamily="@font/galyon_bold"
-            android:textColor="@color/colorBlanco"
-            android:textSize="40dp">
-        </TextView>
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="300dp">
 
-                <TableLayout
-                    android:layout_width="250dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="400dp">
+                    <TableRow>
 
-                <TableRow>
+                        <Button
+                            android:onClick="correcto"
+                            android:id="@+id/boton_quiz_incorrecto"
+                            android:background="@drawable/ex2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp">
+                        </Button>
 
-                    <Button
-                        android:onClick="correcto"
-                        android:id="@+id/boton_quiz_incorrecto"
-                        android:background="@drawable/ex2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp">
-                    </Button>
-
-                    <Button
-                        android:onClick="incorrecto"
-                        android:id="@+id/boton_quiz_correcto"
-                        android:background="@drawable/ex1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="50dp">
-                    </Button>
-                </TableRow>
-            </TableLayout>
-        </RelativeLayout>
+                        <Button
+                            android:id="@+id/boton_quiz_correcto"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="50dp"
+                            android:background="@drawable/ex1"
+                            android:onClick="incorrecto">
+                        </Button>
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

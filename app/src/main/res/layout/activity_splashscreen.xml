@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingHorizontal="30dp"
     tools:context=".inicio.SplashscreenActivity"
     android:background="@color/b">
 
@@ -12,14 +14,10 @@
 
         <ImageButton
             android:id="@+id/primeraPantalla"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="230dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="230dp"
-            android:background="@drawable/logo">
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:background="@drawable/apoyo3">
         </ImageButton>
 
     </LinearLayout>

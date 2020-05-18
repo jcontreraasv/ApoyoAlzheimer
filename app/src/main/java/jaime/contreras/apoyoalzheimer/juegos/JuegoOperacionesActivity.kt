@@ -21,7 +21,7 @@ class JuegoOperacionesActivity : AppCompatActivity() {
 
         quiz1.add(Operaciones("5 x 5 = ?","25","20","30","35",1))
         quiz1.add(Operaciones("9 x 8 = ?","80","70","72","74",3))
-        quiz1.add(Operaciones("6 x 7 = ?","38","42","44","40",2 ))
+        quiz1.add(Operaciones("6 x 7 = ?","38","42","44","40",2))
 
         mostrarPregunta(quiz1.get(currentQuizIndex))
     }

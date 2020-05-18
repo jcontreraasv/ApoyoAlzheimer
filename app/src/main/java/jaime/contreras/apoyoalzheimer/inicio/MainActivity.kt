@@ -86,14 +86,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(account: GoogleSignInAccount?) {
         if (account!=null){
-            val intent= Intent(this,
-                BienvenidoActivity::class.java)
+            val intent= Intent(this, BienvenidoActivity::class.java)
 
             startActivity(intent)
         }
     }
 
     private fun initialise() {
+
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         //mProgressBar = ProgressDialog(this)
@@ -101,8 +101,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loginUser() {
+
         email = etEmail.text.toString()
         password = etPassword.text.toString()
+
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
             //mProgressBar.setMessage("Registering User...")
             //mProgressBar.show()

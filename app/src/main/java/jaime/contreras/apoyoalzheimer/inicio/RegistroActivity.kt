@@ -76,6 +76,8 @@ class RegistroActivity : AppCompatActivity() {
                     currentUserDb.child("lastName").setValue(lastName)
 
                     updateUserInfoAndGoHome()
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+
             }.addOnFailureListener{
 
                     Toast.makeText(this, "Error en la autenticación.", Toast.LENGTH_SHORT).show()
@@ -91,7 +93,7 @@ class RegistroActivity : AppCompatActivity() {
     }
 
     private fun updateUserInfoAndGoHome() {
-        val intent = Intent(this, BienvenidoActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
 

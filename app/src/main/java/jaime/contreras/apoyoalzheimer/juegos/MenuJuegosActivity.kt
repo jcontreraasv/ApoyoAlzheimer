@@ -14,12 +14,16 @@ class MenuJuegosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu_juegos)
 
         var intento1: Intent = Intent(this, JuegoOperacionesActivity::class.java)
-
+        var intento2: Intent = Intent(this, JuegoColoresActivity::class.java)
         var intento3: Intent = Intent(this, JuegoExamenActivity::class.java)
         //var intento3: Intent = Intent(this, QuizActivity::class.java)
 
         operacionesBtn.setOnClickListener{
             startActivity(intento1)
+        }
+
+        coloresBtn.setOnClickListener{
+            startActivity(intento2)
         }
 
         examenBtn.setOnClickListener{

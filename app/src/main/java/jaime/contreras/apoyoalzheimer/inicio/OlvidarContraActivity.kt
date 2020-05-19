@@ -12,19 +12,19 @@ import jaime.contreras.apoyoalzheimer.R
 
 class OlvidarContraActivity : AppCompatActivity() {
 
-    private lateinit var txtEmail:EditText
+    private lateinit var correo:EditText
     private lateinit var auth:FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_olvidar_contra)
 
-        txtEmail=findViewById(R.id.txtName)
+        correo=findViewById(R.id.txtName)
         auth=FirebaseAuth.getInstance()
     }
 
     fun botonSend(view:View){
-        val email= txtEmail.text.toString()
+        val email= correo.text.toString()
 
         if (!TextUtils.isEmpty(email)) {
             auth.sendPasswordResetEmail(email).addOnCompleteListener(this) {

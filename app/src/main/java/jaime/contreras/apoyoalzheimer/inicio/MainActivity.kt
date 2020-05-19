@@ -21,13 +21,10 @@ import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
-    //private val TAG = "LoginActivity"
-
-    private var email by Delegates.notNull<String>()
-    private var password by Delegates.notNull<String>()
-    private lateinit var etEmail: EditText
-    private lateinit var etPassword: EditText
-    //private lateinit var mProgressBar: ProgressDialog
+    private var correo by Delegates.notNull<String>()
+    private var contrasena by Delegates.notNull<String>()
+    private lateinit var campoTextoCorreo: EditText
+    private lateinit var campoTextoContrasena: EditText
 
     val RC_SIGN_IN=123
     lateinit var mGoogleSignInClient: GoogleSignInClient
@@ -94,22 +91,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun initialise() {
 
-        etEmail = findViewById(R.id.etEmail)
-        etPassword = findViewById(R.id.etPassword)
-        //mProgressBar = ProgressDialog(this)
+        campoTextoCorreo = findViewById(R.id.etEmail)
+        campoTextoContrasena = findViewById(R.id.etPassword)
         mAuth = FirebaseAuth.getInstance()
     }
 
     private fun loginUser() {
 
-        email = etEmail.text.toString()
-        password = etPassword.text.toString()
+        correo = campoTextoCorreo.text.toString()
+        contrasena = campoTextoContrasena.text.toString()
 
-        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            //mProgressBar.setMessage("Registering User...")
-            //mProgressBar.show()
+        if (!TextUtils.isEmpty(correo) && !TextUtils.isEmpty(contrasena)) {
 
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+            mAuth.signInWithEmailAndPassword(correo, contrasena).addOnCompleteListener(this) {
                     task ->
                     if (task.isSuccessful) {
                         goHome()
@@ -126,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun goHome() {
-        //mProgressBar.hide()
+
         val intent = Intent(this, BienvenidoActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 

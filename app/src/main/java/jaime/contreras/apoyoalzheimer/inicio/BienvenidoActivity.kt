@@ -12,18 +12,6 @@ class BienvenidoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienvenido)
 
-        val bundle= intent.extras
-
-        /*
-        if(bundle!=null){
-            val nombre=bundle.getString("name")
-            val correo=bundle.getString("email")
-
-            tv_nombre.setText(nombre)
-            tv_email.setText(correo)
-        }
-         */
-
         val background= object : Thread(){
             override fun run() {
                 try{

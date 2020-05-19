@@ -16,18 +16,18 @@ import kotlin.properties.Delegates
 
 class RegistroActivity : AppCompatActivity() {
 
-    private lateinit var txtName: EditText
-    private lateinit var txtLastName: EditText
-    private lateinit var txtEmail: EditText
-    private lateinit var txtPassword: EditText
-    private lateinit var databaseReference: DatabaseReference
-    private lateinit var database: FirebaseDatabase
+    private lateinit var nombre: EditText
+    private lateinit var apellido: EditText
+    private lateinit var correoET: EditText
+    private lateinit var contrasenaET: EditText
+    private lateinit var dbReference: DatabaseReference
+    private lateinit var db: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
 
-    private var firstName by Delegates.notNull<String>()
-    private var lastName by Delegates.notNull<String>()
-    private var email by Delegates.notNull<String>()
-    private var password by Delegates.notNull<String>()
+    private var nombres by Delegates.notNull<String>()
+    private var apellidos by Delegates.notNull<String>()
+    private var correo by Delegates.notNull<String>()
+    private var contrasena by Delegates.notNull<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,40 +38,35 @@ class RegistroActivity : AppCompatActivity() {
 
     private fun initialise() {
 
-        txtName = findViewById(R.id.txtName)
-        txtLastName = findViewById(R.id.txtLastName)
-        txtEmail = findViewById(R.id.txtEmail)
-        txtPassword = findViewById(R.id.txtPassword)
-
-        //progressBar = ProgressDialog(this)
-
-        database = FirebaseDatabase.getInstance()
+        nombre = findViewById(R.id.txtName)
+        apellido = findViewById(R.id.txtLastName)
+        correoET = findViewById(R.id.txtEmail)
+        contrasenaET = findViewById(R.id.txtPassword)
+        
+        db = FirebaseDatabase.getInstance()
 
         auth = FirebaseAuth.getInstance()
 
-        databaseReference = database.reference.child("Users")
+        dbReference = db.reference.child("Users")
     }
 
     private fun createNewAccount() {
 
-        firstName = txtName.text.toString()
-        lastName = txtLastName.text.toString()
-        email = txtEmail.text.toString()
-        password = txtPassword.text.toString()
+        nombres = nombre.text.toString()
+        apellidos = apellido.text.toString()
+        correo = correoET.text.toString()
+        contrasena = contrasenaET.text.toString()
 
-        if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+        if (!TextUtils.isEmpty(nombres) && !TextUtils.isEmpty(apellidos) && !TextUtils.isEmpty(correo) && !TextUtils.isEmpty(contrasena)) {
 
-            //progressBar.setMessage("Usuario registrado...")
-            //progressBar.show()
-
-            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+            auth.createUserWithEmailAndPassword(correo, contrasena).addOnCompleteListener(this) {
 
                     val user: FirebaseUser = auth.currentUser!!
                     verifyEmail(user);
 
-                    val currentUserDb = databaseReference.child(user.uid)
-                    currentUserDb.child("firstName").setValue(firstName)
-                    currentUserDb.child("lastName").setValue(lastName)
+                    val currentUserDb = dbReference.child(user.uid)
+                    currentUserDb.child("firstName").setValue(nombres)
+                    currentUserDb.child("lastName").setValue(apellidos)
 
                     updateUserInfoAndGoHome()
                 Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
@@ -94,8 +89,6 @@ class RegistroActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
-
-        //progressBar.hide()
     }
 
     private fun verifyEmail(user: FirebaseUser) {

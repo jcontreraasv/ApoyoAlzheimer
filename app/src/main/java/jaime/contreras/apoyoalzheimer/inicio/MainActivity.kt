@@ -133,15 +133,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun iniciosesion(view: View) {
+    fun iniciosesion(view:View) {
         loginUser()
     }
 
-    fun olvidarContra(view: View) {
+    fun olvidarContra(view:View) {
         startActivity(Intent(this, OlvidarContraActivity::class.java))
     }
 
-    fun registrar(view: View) {
+    //
+    fun registrar(view:View) {
         startActivity(Intent(this, RegistroActivity::class.java))
     }
 }

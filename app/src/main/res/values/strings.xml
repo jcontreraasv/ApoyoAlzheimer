@@ -1,7 +1,7 @@
 <resources>
 
     //STRINGS REGISTRO
-    <string name="app_name">ApoyoAlzheimer</string>
+    <string name="app_name">Apoyo Alzheimer</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="email">Email</string>
@@ -36,10 +36,6 @@
     <string name="col">COLORES</string>
     <string name="ex">EXAMEN</string>
 
-    //STRING JUEGO SECUENCIA
-    <string name="ins1">El objetivo de este juego es observar y seguir una vez terminada la
-        secuencia deberá presionar por orden los círculos sin equivocarse conforme vaya progresando
-        aparecerán más círculos.</string>
 
     //STRING JUEGO COLORES
     <string name="ins3">El objetivo de este ejercicio es decir lo más rápido que puedas el color de
@@ -58,8 +54,16 @@
     <string name="tab_text_2">Tab 2</string>
 
 
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tab_layout">TabLayoutActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>

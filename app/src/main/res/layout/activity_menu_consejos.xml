@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".funciones.MenuConsejosActivity"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingHorizontal="15dp"
+    android:background="@color/b">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/apoyo2">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/galyon_bold"
+                android:textStyle="bold"
+                android:text="CONSEJOS"
+                android:textColor="@color/colorBlanco"
+                android:textSize="40dp"
+                android:gravity="center">
+            </TextView>
+
+            <Button
+                android:id="@+id/consejos_btn_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:textStyle="bold"
+                android:text="Usuarios"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/cons1"
+                android:drawableRight="@drawable/cons1">
+
+            </Button>
+
+            <Button
+                android:id="@+id/consejos_btn_alzheimer"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/galyon_bold"
+                android:textSize="30dp"
+                android:textColor="@color/e"
+                android:textStyle="bold"
+                android:text="Alzheimer"
+                android:background="@drawable/boton_orilla_redonda"
+                android:drawableLeft="@drawable/cons1"
+                android:drawableRight="@drawable/cons1">
+
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

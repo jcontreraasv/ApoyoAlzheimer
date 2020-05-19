@@ -1,6 +1,5 @@
 package jaime.contreras.apoyoalzheimer.inicio
 
-import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,7 +20,6 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var txtLastName: EditText
     private lateinit var txtEmail: EditText
     private lateinit var txtPassword: EditText
-    private lateinit var  progressBar: ProgressDialog
     private lateinit var databaseReference: DatabaseReference
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
@@ -88,7 +86,7 @@ class RegistroActivity : AppCompatActivity() {
         }
     }
 
-    fun register(view: View){
+    fun register(view:View){
         createNewAccount()
     }
 

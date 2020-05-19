@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c"
+    android:paddingBottom="50dp"
+    android:paddingTop="20dp"
+    android:paddingHorizontal="30dp"
+    tools:context=".funciones.AgregarConsejoActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/b"
+        android:textStyle="bold"
+        android:text="Agrega un consejo:"
+        android:textSize="30dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/tituloConsejo_usuario"
+        android:textColor="@color/b"
+        android:backgroundTint="@color/a"
+        android:fontFamily="@font/galyon_bold"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"/>
+
+    <EditText
+        android:id="@+id/contenidoConsejo_usuario"
+        android:textStyle="bold"
+        android:hint="Escribir consejo..."
+        android:textColor="@color/b"
+        android:backgroundTint="@color/a"
+        android:fontFamily="@font/galyon_bold"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_guardarConsejoUser"
+        android:background="@drawable/boton_redondo"
+        android:fontFamily="@font/galyon_bold"
+        android:textStyle="bold"
+        android:text="Guardar"
+        android:textColor="@color/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="50dp"
-    android:paddingHorizontal="25dp"
+    android:paddingHorizontal="10dp"
     tools:context=".juegos.MenuJuegosActivity"
     android:background="@color/b">
 
@@ -29,21 +29,6 @@
                 android:textSize="50dp"
                 android:gravity="center">
             </TextView>
-
-            <Button
-                android:id="@+id/secuenciaBtn"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/galyon_bold"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                android:textColor="@color/e"
-                android:text="@string/sec"
-                android:background="@drawable/boton_orilla_redonda"
-                android:drawableLeft="@drawable/sec2"
-                android:drawableRight="@drawable/sec1">
-            </Button>
 
             <Button
                 android:id="@+id/operacionesBtn"
@@ -74,9 +59,7 @@
                 android:background="@drawable/boton_orilla_redonda"
                 android:drawableLeft="@drawable/col2"
                 android:drawableRight="@drawable/col1">
-
             </Button>
-
             <Button
                 android:id="@+id/examenBtn"
                 android:layout_width="match_parent"

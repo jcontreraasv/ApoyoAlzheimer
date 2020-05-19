@@ -7,6 +7,7 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme1">
-
-        <activity android:name=".funciones.ConsejosAlzheimerActivity" />
-        <activity android:name=".funciones.ConsejosUsuarioActivity" />
+        <activity android:name=".funciones.MainNotasAlzheimerActivity" />
+        <activity android:name=".funciones.AdaptadorNotasAlzheimer" />
+        <activity android:name=".funciones.AgregarNotaAlzheimerActivity" />
+        <activity android:name=".funciones.MainConsejosUsuarioActivity" />
+        <activity android:name=".funciones.MenuConsejosActivity" />
+        <activity android:name=".funciones.AgregarConsejoActivity" />
         <activity android:name=".juegos.JuegoOperacionesActivity" />
-        <activity android:name=".juegos.JuegoExamenFinalActivity" />
         <activity android:name=".juegos.JuegoColoresActivity" />
         <activity android:name=".juegos.JuegoSecuenciaActivity" />
         <activity android:name=".juegos.JuegoExamenActivity" />
